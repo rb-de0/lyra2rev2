@@ -22,7 +22,7 @@ This requires
 
 ## Installation
 
-     $ go get github.com/bitgoin/lyra2rev2
+     $ go get github.com/rb-de0/lyra2rev2
 
 
 ## Example
@@ -30,7 +30,7 @@ This requires
 
 ```go
 
-import "github.com/bitgoin/lyra2rev2"
+import "github.com/rb-de0/lyra2rev2"
 
 func main(){
     data := []byte{0x01,0x02}

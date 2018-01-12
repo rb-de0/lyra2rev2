@@ -334,7 +334,7 @@ func (c *CubeHash) sixteenRounds() {
 
 //cubehash56 calculates cubuhash256.
 //length of data must be 32 bytes.
-func cubehash256(data []byte) []byte {
+func Cubehash256(data []byte) []byte {
 	c := NewCubeHash()
 	buf := make([]byte, 32)
 	buf[0] = 0x80

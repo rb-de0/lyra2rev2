@@ -30,8 +30,8 @@ package lyra2rev2
 
 import (
 	"github.com/aead/skein"
-	"github.com/dchest/blake256"
 	"github.com/bitgoin/lyra2rev2/sha3"
+	"github.com/dchest/blake256"
 )
 
 //Sum returns the result of Lyra2re2 hash.
@@ -48,12 +48,12 @@ func Sum(data []byte) ([]byte, error) {
 	}
 	resultkeccak := keccak.Sum(nil)
 
-	resultcube := cubehash256(resultkeccak)
+	resultcube := Cubehash256(resultkeccak)
 	lyra2result := make([]byte, 32)
-	lyra2(lyra2result, resultcube, resultcube, 1, 4, 4)
+	Lyra2(lyra2result, resultcube, resultcube, 1, 4, 4)
 	var skeinresult [32]byte
 	skein.Sum256(&skeinresult, lyra2result, nil)
-	resultcube2 := cubehash256(skeinresult[:])
-	resultbmw := bmw256(resultcube2)
+	resultcube2 := Cubehash256(skeinresult[:])
+	resultbmw := Bmw256(resultcube2)
 	return resultbmw, nil
 }

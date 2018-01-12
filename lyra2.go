@@ -451,7 +451,7 @@ func reducedDuplexRow(state []uint64, rowIn []uint64, rowInOut []uint64,
 // @param nCols Number of columns of the memory matrix (C)
 //
 // @return 0 if the key is generated correctly; -1 if there is an error (usually due to lack of memory for allocation)
-func lyra2(k []byte, pwd []byte, salt []byte, timeCost uint64, nRows int, nCols int) {
+func Lyra2(k []byte, pwd []byte, salt []byte, timeCost uint64, nRows int, nCols int) {
 
 	//============================= Basic variables ============================//
 	row := 2              //index of row to be processed

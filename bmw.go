@@ -128,7 +128,7 @@ func (b *bmw) compress(m []uint32) {
 
 //bmw256 calculates and returns bmw256 of input.
 //length of input must be 32 bytes.
-func bmw256(input []byte) []byte {
+func Bmw256(input []byte) []byte {
 	b := new()
 	buf := make([]byte, 64)
 	copy(buf, input)
